@@ -41,8 +41,8 @@ public plugin_init()
 	register_event("DeathMsg","death_msg","a")
 	register_menucmd(register_menuid("rod"), Keysrod, "Pressedrod")
 	register_clcmd("awp","HandleCmd")
-    	register_clcmd("sg550","HandleCmd")
-    	register_clcmd("g3sg1","HandleCmd")
+    	register_clcmd("ak47","HandleCmd")
+    	register_clcmd("m4a1","HandleCmd")
 	register_clcmd("say /wantvip","ShowMotd")
 	maxplayers = get_maxplayers()
 	gmsgSayText = get_user_msgid("SayText")
@@ -274,7 +274,7 @@ public client_authorized(id)
 }
 public PrintText(id)
 {
- client_print(id, print_chat, "[VIP] write /wantvip and u will see how get VIP and VIP privilegies.")
+ client_print(id, print_chat, "[VIP Request] befrestid /wantvip For Give Vip.")
 }
 
 public handle_say(id) {
@@ -315,7 +315,7 @@ public print_adminlist(user)
 	
 	get_cvar_string("amx_contactinfo", contact, 63)
 	if(contact[0])  {
-		format(contactinfo, 111, "%s Contact Server Admin -- %s", COLOR, contact)
+		format(contactinfo, 111, "%s Contact Server Admin\nTelegram: @MLsix\nPhone:09300322819 -- %s", COLOR, contact)
 		print_message(user, contactinfo)
 	}
 }
